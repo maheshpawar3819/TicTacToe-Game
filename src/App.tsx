@@ -47,31 +47,31 @@ function App(): React.JSX.Element {
       gameState[0] === gameState[3] &&
       gameState[3] === gameState[6]
     ) {
-      setGameWinner(`${gameState[0]} won the game! 🥳`);
+      setGameWinner(`${gameState[0]} won the game!🏆🥇🥳`);
     } else if (
       gameState[1] !== 'empty' &&
       gameState[1] === gameState[4] &&
       gameState[4] === gameState[7]
     ) {
-      setGameWinner(`${gameState[1]} won the game! 🥳`);
+      setGameWinner(`${gameState[1]} won the game!🏆🥇🥳`);
     } else if (
       gameState[2] !== 'empty' &&
       gameState[2] === gameState[5] &&
       gameState[5] === gameState[8]
     ) {
-      setGameWinner(`${gameState[2]} won the game! 🥳`);
+      setGameWinner(`${gameState[2]} won the game!🏆🥇🥳`);
     } else if (
       gameState[0] !== 'empty' &&
       gameState[0] === gameState[4] &&
       gameState[4] === gameState[8]
     ) {
-      setGameWinner(`${gameState[0]} won the game! 🥳`);
+      setGameWinner(`${gameState[0]} won the game!🏆🥇🥳`);
     } else if (
       gameState[2] !== 'empty' &&
       gameState[2] === gameState[4] &&
       gameState[4] === gameState[6]
     ) {
-      setGameWinner(`${gameState[2]} won the game! 🥳`);
+      setGameWinner(`${gameState[2]} won the game!🏆🥇🥳`);
     } else if (!gameState.includes('empty', 0)) {
       setGameWinner('Draw game... ⌛️');
     }
@@ -91,10 +91,10 @@ function App(): React.JSX.Element {
       //to check whose turn
       gameState[itmeNumber] === isCross ? 'cross' : 'circle';
       //flip the switch
-      setIsCross[!isCross];
+      setIsCross(!isCross);
     } else {
       return Snackbar.show({
-        text: 'Position is already fillde',
+        text: 'Position is already filled',
         backgroundColor: 'red',
         textColor: 'white',
       });
